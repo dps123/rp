@@ -31,7 +31,7 @@ func (p *proxyConnection) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	r.Header.Set("X-Forwarded-Host", r.Header.Get("Host"))
 	p.reverseProxy.Transport = &http.Transport{
 		DialContext: (&net.Dialer{
-			Timeout:   10 * time.Second,
+			Timeout:   120 * time.Second,
 			KeepAlive: 10 * time.Second,
 			DualStack: true,
 		}).DialContext,
