@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/ahmdrz/rp/cli"
+	"github.com/dps123/rp/cli"
 )
 
 func main() {
